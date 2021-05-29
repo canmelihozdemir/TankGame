@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TankGame.Shooting;
 using UnityEngine;
 
 namespace TankGame.Camera
@@ -10,10 +11,18 @@ namespace TankGame.Camera
         [SerializeField] private Transform _targetTransform;
         [SerializeField] private Transform _cameraTransform;
 
+        public ShootingManager shootingManager;
+
         private void Update()
         {
             FollowRotationOfTarget();
             FollowPositionOfTarget();
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                shootingManager.Shoot(_cameraTransform.position, _cameraTransform.forward);
+                Debug.Log("a");
+            }
         }
 
         private void FollowRotationOfTarget()
