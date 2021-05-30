@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationLerpSpeed: 10
   _positionLerpSpeed: 1
-  _positionOffset: {x: 0, y: 3, z: -2}
+  _positionOffset: {x: 0, y: 2.5, z: -5}
